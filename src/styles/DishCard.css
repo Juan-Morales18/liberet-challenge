@@ -1,0 +1,43 @@
+.DishCard {
+    background-color: white;
+    position: relative;
+    padding: 4px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.203);
+}
+
+DishCard__tag {
+    position: absolute;
+    top: 1;
+    right: 1;
+    color: orange;
+}
+
+.DishCard__name {
+    color: white;
+    font-size: 18px;
+}
+
+.DishCard__img-container {
+    width: 120px;
+}
+
+.DishCard__text {
+    color: black;
+}
+
+.DishCard__img {
+    width: 100%;
+}
+
+.DishCard__footer {
+    display: flex;
+}
+
+.Dishcard__img-container--icon {
+    font-size: 16px;
+}
+
+.DishCard__price {
+    font-weight: bolder;
+}

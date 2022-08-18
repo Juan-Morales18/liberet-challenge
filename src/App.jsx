@@ -1,7 +1,13 @@
+import { AppRouter } from "./router/AppRouter";
 import "./App.css";
+import { NavBar } from "./components/NavBar";
 
 function App() {
-  return <div> Frontend Challenge</div>;
+  return (
+    <AppRouter>
+      <NavBar />
+    </AppRouter>
+  );
 }
 
 export default App;

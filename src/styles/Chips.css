@@ -1,0 +1,21 @@
+.Chips {
+    width: 100%;
+    background: none;
+    color: black;
+}
+
+.Chips__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 10px;
+    background-color: rgb(230, 222, 222);
+}
+
+.Chips__item {
+    display: block;
+    font-size: 16px;
+}
