@@ -1,13 +1,26 @@
+import { useState } from "react";
 import { AppLayout } from "../App/AppLayout";
 import { Header } from "../components/Header";
 import { Dates } from "../components/Dates";
 import { Chips } from "../components/Chips";
-import { DishesList } from "../components/DishesList";
+import { DishesGrid } from "../components/DishesGrid";
 import { useModal } from "../hooks/useModal";
 import { Modal } from "../components";
+import { ChipCategories } from "../components/ChipCategories";
+import { ChipSchedule } from "../components/ChipSchedule";
 
 function HomePage() {
   const { isOpen, handleOpen, handleClose } = useModal();
+  const [componentToModal, setComponentToModal] = useState("");
+
+  const renderComponent = () => {
+    if (componentToModal === "schedule") {
+      return <ChipSchedule />;
+    }
+    if (componentToModal === "categories") {
+      return <ChipCategories />;
+    }
+  };
 
   return (
     <div className="page">
@@ -15,11 +28,16 @@ function HomePage() {
         <div className="head-section">
           <Header />
           <Dates />
-          <Chips handleOpen={handleOpen} />
+          <Chips
+            handleOpen={handleOpen}
+            setComponentToModal={setComponentToModal}
+          />
         </div>
         <div className="body-section">
-          <DishesList />
-          {isOpen && <Modal handleClose={handleClose}></Modal>}
+          <DishesGrid />
+          {isOpen && (
+            <Modal handleClose={handleClose}>{renderComponent()}</Modal>
+          )}
         </div>
       </AppLayout>
     </div>

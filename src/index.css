@@ -19,3 +19,14 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+:root {
+    --primary-light-orange: #FCAB3F;
+    --primary-saffron-mango: #FDC963;
+    --primary-liver: #4D4D4D;
+    --primary-white: #FFFFFF;
+    --secondary-aqua-island: #A1D2CE;
+    --secondary-sea-pink: #F49897;
+    --secondary-platinum: #E4E4E4;
+    --secondary-fantasy: #FEF2F1;
+}

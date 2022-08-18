@@ -1,0 +1,16 @@
+.ChipOptions {
+    width: 80%;
+    padding-left: 24px;
+    font-size: 18px;
+    margin: 16px;
+}
+
+.ChipOptions__title {
+    font-size: 18px;
+}
+
+.ChipOptions__labels {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

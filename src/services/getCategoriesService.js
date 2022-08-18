@@ -4,8 +4,8 @@ async function getCategoriesService(url) {
 
     if (response.ok) {
       const data = await response.json();
-
-      return data;
+      console.log(data);
+      return { error: false, data };
     } else {
       return { error: true, message: "An error ocurred" };
     }

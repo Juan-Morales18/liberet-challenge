@@ -47,7 +47,7 @@ async function getDishesByCategorieService(url) {
 
         dishesList.push(dishInfo);
       }
-      console.log(dishesList);
+      console.log("Hicimos la peticion :(");
       return { error: false, data: dishesList };
     } else {
       return { error: true, message: "An error ocurred" };

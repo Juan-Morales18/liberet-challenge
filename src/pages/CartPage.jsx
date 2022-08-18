@@ -1,9 +1,13 @@
 import { AppLayout } from "../App/AppLayout";
 
+import "../styles/Page.css";
+
 function CartPage() {
   return (
     <AppLayout>
-      <div>Cart page</div>
+      <div className="Page">
+        <h2>Cart</h2>
+      </div>
     </AppLayout>
   );
 }

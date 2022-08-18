@@ -1,43 +1,75 @@
 .DishCard {
-    background-color: white;
-    position: relative;
-    padding: 4px;
+    background-color: var(--primary-white);
     border-radius: 16px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.203);
-}
-
-DishCard__tag {
-    position: absolute;
-    top: 1;
-    right: 1;
-    color: orange;
-}
-
-.DishCard__name {
-    color: white;
-    font-size: 18px;
+    box-shadow: 0 4px 10px -1px rgba(18, 18, 18, 0.401);
 }
 
 .DishCard__img-container {
-    width: 120px;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 4px 10px -1px rgba(18, 18, 18, 0.401);
+    border-radius: 16px;
+}
+
+
+.DishCard__tag {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    margin: 0;
+    padding: 4px 16px;
+    border-radius: 10px;
+    background-color: var(--secondary-fantasy);
+    color: var(--primary-light-orange);
+    font-size: 18px;
+}
+
+.DishCard__area {
+    color: var(--primary-white);
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.DishCard__name {
+    color: var(--primary-white);
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 .DishCard__text {
-    color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(74, 33, 33, 0.16);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .DishCard__img {
     width: 100%;
+    border-radius: 16px;
 }
 
 .DishCard__footer {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
 }
 
-.Dishcard__img-container--icon {
-    font-size: 16px;
+.DishCard__img-container--icon {
+    width: 32px;
 }
 
 .DishCard__price {
-    font-weight: bolder;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
 }

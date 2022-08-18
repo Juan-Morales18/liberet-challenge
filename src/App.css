@@ -2,11 +2,10 @@
     height: 90vh;
     width: 100vw;
     overflow: scroll;
-    background-color: #FEF2F1;
+    background-color: var(--secondary-fantasy);
 }
 
 .head-section {
-    border: solid 2px black;
     position: relative;
     right: 0;
     left: 0;
@@ -15,7 +14,6 @@
 
 .body-section {
     position: relative;
-    border: solid 2px red;
     height: 70vh;
     overflow-y: scroll;
 }

@@ -1,5 +1,6 @@
 .Chip {
-    background-color: white;
+    background-color: var(--primary-white);
+    border: solid 2px var(--secondary-platinum);
     padding: 0 10px;
     display: flex;
     align-items: center;

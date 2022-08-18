@@ -1,12 +1,15 @@
 import { AppRouter } from "./router/AppRouter";
-import "./App.css";
+import { AppProvider } from "./context/AppContext";
 import { NavBar } from "./components/NavBar";
+import "./App.css";
 
 function App() {
   return (
-    <AppRouter>
-      <NavBar />
-    </AppRouter>
+    <AppProvider>
+      <AppRouter>
+        <NavBar />
+      </AppRouter>
+    </AppProvider>
   );
 }
 

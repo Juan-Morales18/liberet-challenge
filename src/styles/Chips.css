@@ -11,8 +11,8 @@
     gap: 20px;
     list-style: none;
     margin: 0;
-    padding: 10px 10px;
-    background-color: rgb(230, 222, 222);
+    padding: 10px 0px;
+    background-color: var(--secondary-fantasy);
 }
 
 .Chips__item {

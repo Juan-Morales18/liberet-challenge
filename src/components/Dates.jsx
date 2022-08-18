@@ -1,17 +1,20 @@
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 import { Date } from ".";
+
 import "../styles/Dates.css";
 
 function Dates() {
-  const currentDate = { day: "jue", num: "02" };
+  const { date: currentDate, setDate } = useContext(AppContext);
 
   let dates = [
-    { day: "dom", num: "28" },
-    { day: "lun", num: "29" },
-    { day: "mar", num: "30" },
-    { day: "mie", num: "01" },
-    { day: "jue", num: "02" },
-    { day: "vie", num: "03" },
-    { day: "sab", num: "04" },
+    { day: "Dom", num: "28" },
+    { day: "Lun", num: "29" },
+    { day: "Mar", num: "30" },
+    { day: "Mie", num: "01" },
+    { day: "Jue", num: "02" },
+    { day: "Vie", num: "03" },
+    { day: "Sab", num: "04" },
   ];
 
   dates = dates.map((date) =>
@@ -25,7 +28,7 @@ function Dates() {
       <ul className="Dates__list">
         {dates.map((date) => {
           return (
-            <li key={date.day}>
+            <li key={date.day} onClick={() => setDate(date)}>
               <Date date={date} />
             </li>
           );

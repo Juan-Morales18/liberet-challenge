@@ -1,0 +1,18 @@
+.Label {
+    width: 100%;
+    background-color: var(--secondary-fantasy);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px -1px rgba(18, 18, 18, 0.318);
+    border: solid 1px var(--secondary-aqua-island);
+
+}
+
+.Label--selected {
+    box-shadow: 0 4px 10px -1px rgba(18, 18, 18, 0.538);
+}
+
+.Label__text {
+    padding: 0px 16px;
+    margin: 0;
+}

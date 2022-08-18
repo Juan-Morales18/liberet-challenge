@@ -1,24 +1,26 @@
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
+import { DishCard } from "./DishCard";
 import { getDishesByCategorieService } from "../services/getDishesByCategorieService";
 import { baseApiUrl } from "../consts/baseApiUrl";
 import { useFetch } from "../hooks/useFetch";
-import { DishCard } from "./DishCard";
-import "../styles/DishesList.css";
 
-function DishesList() {
-  const initialMeal = "beef";
-  const url = baseApiUrl + `filter.php?c=${initialMeal}`;
+import "../styles/DishesGrid.css";
 
+function DishesGrid() {
+  const { category } = useContext(AppContext);
+
+  const url = baseApiUrl + `filter.php?c=${category}`;
   const {
     data: dishes,
-    error,
     isLoading,
+    error,
   } = useFetch(getDishesByCategorieService, url);
-
-  console.log(dishes);
 
   return (
     <div>
-      <div className="DishesList">
+      <div className="DishesGrid">
+        {isLoading && <p>Loading...</p>}
         {!isLoading &&
           dishes.map((dish) => (
             <DishCard
@@ -35,4 +37,4 @@ function DishesList() {
   );
 }
 
-export { DishesList };
+export { DishesGrid };
