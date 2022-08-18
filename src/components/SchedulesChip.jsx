@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { Label } from ".";
+import { clockIcon } from "../consts/icons";
 
 import "../styles/ChipOptions.css";
 
@@ -15,7 +16,10 @@ function SchedulesChip() {
 
   return (
     <div className="ChipOptions">
-      <p className="ChipOptions__title"> Elige un horario de entrega</p>
+      <div className="ChipOptions__header">
+        <img className="ChipOptions__icon" src={clockIcon} alt="clock icon" />
+        <p className="ChipOptions__title">Elige un horario de entrega</p>
+      </div>
       <div className="ChipOptions__labels">
         {schedules.map((schedule) => (
           <Label

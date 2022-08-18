@@ -4,6 +4,7 @@ import { useFetch } from "../hooks/useFetch";
 import { baseApiUrl } from "../consts/baseApiUrl";
 import { getCategoriesService } from "../services/getCategoriesService";
 import { Label } from "./Label";
+import { cutleryIcon } from "../consts/icons";
 
 import "../styles/ChipOptions.css";
 
@@ -19,7 +20,14 @@ function CategoriesChip() {
 
   return (
     <div className="ChipOptions">
-      <p className="ChipOptions__title">Categorias Disponibles</p>
+      <div className="ChipOptions__header">
+        <img
+          className="ChipOptions__icon"
+          src={cutleryIcon}
+          alt="cutlery icon"
+        />
+        <p className="ChipOptions__title">Elige un servicio</p>
+      </div>
       {isLoading && <p>Loading...</p>}
 
       <div className="ChipOptions__labels">
