@@ -9,7 +9,7 @@ import "../styles/ChipOptions.css";
 
 const categoriesUrl = baseApiUrl + "categories.php";
 
-function ChipCategories() {
+function CategoriesChip() {
   const { category: defaultCategory, setCategory } = useContext(AppContext);
 
   const { data, isLoading, error } = useFetch(
@@ -37,4 +37,4 @@ function ChipCategories() {
   );
 }
 
-export { ChipCategories };
+export { CategoriesChip };

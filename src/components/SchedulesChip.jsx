@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { Label } from "./";
+import { Label } from ".";
 
 import "../styles/ChipOptions.css";
 
-function ChipSchedule() {
+function SchedulesChip() {
   const { schedule: defaultSchedule, setSchedule } = useContext(AppContext);
 
   const schedules = [
@@ -30,4 +30,4 @@ function ChipSchedule() {
   );
 }
 
-export { ChipSchedule };
+export { SchedulesChip };

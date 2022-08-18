@@ -7,6 +7,6 @@ export * from "./Header";
 export * from "./NavBar";
 export * from "./Modal";
 export * from "./Chip";
-export * from "./ChipCategories";
-export * from "./ChipSchedule";
+export * from "./CategoriesChip";
+export * from "./SchedulesChip";
 export * from "./Label";

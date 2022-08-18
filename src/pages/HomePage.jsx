@@ -6,8 +6,8 @@ import { Chips } from "../components/Chips";
 import { DishesGrid } from "../components/DishesGrid";
 import { useModal } from "../hooks/useModal";
 import { Modal } from "../components";
-import { ChipCategories } from "../components/ChipCategories";
-import { ChipSchedule } from "../components/ChipSchedule";
+import { CategoriesChip } from "../components/";
+import { SchedulesChip } from "../components/";
 
 import "../styles/HomePage.css";
 
@@ -17,10 +17,10 @@ function HomePage() {
 
   const renderComponent = () => {
     if (componentToModal === "schedule") {
-      return <ChipSchedule />;
+      return <SchedulesChip />;
     }
     if (componentToModal === "categories") {
-      return <ChipCategories />;
+      return <CategoriesChip />;
     }
   };
 
