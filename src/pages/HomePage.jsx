@@ -25,24 +25,24 @@ function HomePage() {
   };
 
   return (
-    <div className="HomePage">
+    <main className="HomePage">
       <AppLayout>
-        <div className="HomePage__head">
+        <section className="HomePage__head">
           <Header />
           <Dates />
           <Chips
             handleOpen={handleOpen}
             setComponentToModal={setComponentToModal}
           />
-        </div>
-        <div className="HomePage__body">
+        </section>
+        <section className="HomePage__body">
           <DishesGrid />
           {isOpen && (
             <Modal handleClose={handleClose}>{renderComponent()}</Modal>
           )}
-        </div>
+        </section>
       </AppLayout>
-    </div>
+    </main>
   );
 }
 

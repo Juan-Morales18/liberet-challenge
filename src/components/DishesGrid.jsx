@@ -18,21 +18,19 @@ function DishesGrid() {
   } = useFetch(getDishesByCategorieService, url);
 
   return (
-    <div>
-      <div className="DishesGrid">
-        {isLoading && <p>Loading...</p>}
-        {!isLoading &&
-          dishes.map((dish) => (
-            <DishCard
-              key={dish.id}
-              id={dish.id}
-              imgUrl={dish.image}
-              name={dish.name}
-              area={dish.area}
-              tags={dish.tags}
-            />
-          ))}
-      </div>
+    <div className="DishesGrid">
+      {isLoading && <p>Loading...</p>}
+      {!isLoading &&
+        dishes.map((dish) => (
+          <DishCard
+            key={dish.id}
+            id={dish.id}
+            imgUrl={dish.image}
+            name={dish.name}
+            area={dish.area}
+            tags={dish.tags}
+          />
+        ))}
     </div>
   );
 }
