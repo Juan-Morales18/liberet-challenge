@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AppLayout } from "../App/AppLayout";
+import { PageLayout } from "./PageLayout";
 import { Header } from "../components/Header";
 import { Dates } from "../components/Dates";
 import { Chips } from "../components/Chips";
@@ -25,8 +25,8 @@ function HomePage() {
   };
 
   return (
-    <main className="HomePage">
-      <AppLayout>
+    <PageLayout>
+      <main className="HomePage">
         <section className="HomePage__head">
           <Header />
           <Dates />
@@ -41,8 +41,8 @@ function HomePage() {
             <Modal handleClose={handleClose}>{renderComponent()}</Modal>
           )}
         </section>
-      </AppLayout>
-    </main>
+      </main>
+    </PageLayout>
   );
 }
 

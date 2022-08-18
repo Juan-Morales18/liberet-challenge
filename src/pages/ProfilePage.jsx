@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { AppLayout } from "../App/AppLayout";
+import { PageLayout } from "./PageLayout";
 import { Label } from "../components";
 
 import "../styles/Page.css";
@@ -9,7 +9,7 @@ function ProfilePage() {
   const { date, category, schedule } = useContext(AppContext);
 
   return (
-    <AppLayout>
+    <PageLayout>
       <div className="Page">
         <h2>Profile</h2>
         <p>Date selected</p>
@@ -19,7 +19,7 @@ function ProfilePage() {
         <p>Schedule selected</p>
         <Label text={schedule} />
       </div>
-    </AppLayout>
+    </PageLayout>
   );
 }
 

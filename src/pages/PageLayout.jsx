@@ -1,6 +1,6 @@
 import { NavBar } from "../components/NavBar";
 
-function AppLayout({ children }) {
+function PageLayout({ children }) {
   return (
     <>
       {children}
@@ -9,4 +9,4 @@ function AppLayout({ children }) {
   );
 }
 
-export { AppLayout };
+export { PageLayout };
