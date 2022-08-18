@@ -9,6 +9,8 @@ import { Modal } from "../components";
 import { ChipCategories } from "../components/ChipCategories";
 import { ChipSchedule } from "../components/ChipSchedule";
 
+import "../styles/HomePage.css";
+
 function HomePage() {
   const { isOpen, handleOpen, handleClose } = useModal();
   const [componentToModal, setComponentToModal] = useState("");
@@ -23,9 +25,9 @@ function HomePage() {
   };
 
   return (
-    <div className="page">
+    <div className="HomePage">
       <AppLayout>
-        <div className="head-section">
+        <div className="HomePage__head">
           <Header />
           <Dates />
           <Chips
@@ -33,7 +35,7 @@ function HomePage() {
             setComponentToModal={setComponentToModal}
           />
         </div>
-        <div className="body-section">
+        <div className="HomePage__body">
           <DishesGrid />
           {isOpen && (
             <Modal handleClose={handleClose}>{renderComponent()}</Modal>

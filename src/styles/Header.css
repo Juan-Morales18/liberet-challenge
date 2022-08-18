@@ -15,6 +15,7 @@
     height: 100%;
     margin: 0;
     padding: 10px 50px;
+    list-style-type: none;
 }
 
 .Header__item {

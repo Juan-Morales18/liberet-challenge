@@ -22,9 +22,38 @@
 
 .NavBar__item {
     width: 50px;
+    height: 50px;
     list-style: none;
 }
 
-.NavBar__img {
+.NavBar__btn {
+    border: none;
     width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.NavBar__btn--cart {
+    background-image: url(../assets/icons/shopping-cart_grey.svg);
+}
+
+.NavBar__btn--cart-selected {
+    background-image: url(../assets/icons/shopping-cart_orange.svg);
+}
+
+.NavBar__btn--home {
+    background-image: url(../assets/icons/home_grey.svg);
+}
+
+.NavBar__btn--home-selected {
+    background-image: url(../assets/icons/home_orange.svg);
+}
+
+.NavBar__btn--profile {
+    background-image: url(../assets/icons/user_grey.svg);
+}
+
+.NavBar__btn--profile-selected {
+    background-image: url(../assets/icons/user_orange.svg);
 }

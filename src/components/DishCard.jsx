@@ -1,4 +1,4 @@
-import { clockIcon } from "../consts/consts";
+import { clockIcon } from "../consts/icons";
 import { formatCurrency } from "../helpers/formatCurrency";
 import "../styles/DishCard.css";
 
@@ -19,7 +19,7 @@ function DishCard({ imgUrl, id, name, area, tags }) {
         <div className="DishCard__img-container--icon">
           <img src={clockIcon} className="DishCard__img" alt="clock" />
         </div>
-        <p className="DishCard__price">{id}</p>
+        <p className="DishCard__price">{formatCurrency(id)}</p>
       </div>
     </article>
   );

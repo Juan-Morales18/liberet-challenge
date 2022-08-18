@@ -1,18 +1,18 @@
-.page {
+.HomePage {
     height: 90vh;
     width: 100vw;
     overflow: scroll;
     background-color: var(--secondary-fantasy);
 }
 
-.head-section {
+.HomePage__head {
     position: relative;
     right: 0;
     left: 0;
     z-index: 9999;
 }
 
-.body-section {
+.HomePage__body {
     position: relative;
     height: 70vh;
     overflow-y: scroll;

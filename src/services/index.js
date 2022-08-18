@@ -1,2 +1,2 @@
-export * from "./getDishes";
-export * from "./getCategories";
+export * from "./getCategoriesService";
+export * from "./getDishesByCategorieService";

@@ -1,18 +1,12 @@
 function formatCurrency(value) {
-  value = value.split("").reverse().join("");
+  value = Number(value);
 
-  let formatedValue = "";
-  let counter = 1;
+  const formatedValue = new Intl.NumberFormat("es-MX", {
+    style: "currency",
+    currency: "MXN",
+  }).format(value);
 
-  for (let char of value) {
-    if (counter === 3) {
-      formatedValue += `.${char}`;
-    } else {
-      formatedValue += value;
-    }
-  }
-
-  return formatedValue.split("").reverse().join("") + "00";
+  return formatedValue;
 }
 
 export { formatCurrency };

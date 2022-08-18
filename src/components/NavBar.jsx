@@ -1,5 +1,4 @@
 import { useNavigate, NavLink } from "react-router-dom";
-import { cartIcon, menuIcon, userIcon } from "../consts/consts";
 import "../styles/NavBar.css";
 
 function NavBar() {
@@ -8,14 +7,40 @@ function NavBar() {
   return (
     <nav className="NavBar">
       <ul className="NavBar__list">
-        <li className="NavBar__item" onClick={() => navigate("/cart")}>
-          <img className="NavBar__img" src={cartIcon} alt="cart" />
+        <li className="NavBar__item">
+          <NavLink to="/cart">
+            {({ isActive }) => (
+              <button
+                className={`NavBar__btn NavBar__btn--cart ${
+                  isActive ? "NavBar__btn--cart-selected" : "NavBar__btn--cart"
+                }`}
+              ></button>
+            )}
+          </NavLink>
         </li>
-        <li className="NavBar__item" onClick={() => navigate("/")}>
-          <img className="NavBar__img" src={menuIcon} alt="home" />
+        <li className="NavBar__item">
+          <NavLink to="/">
+            {({ isActive }) => (
+              <button
+                className={`NavBar__btn  ${
+                  isActive ? "NavBar__btn--home-selected" : "NavBar__btn--home"
+                }`}
+              ></button>
+            )}
+          </NavLink>
         </li>
-        <li className="NavBar__item" onClick={() => navigate("/profile")}>
-          <img className="NavBar__img" src={userIcon} alt="profile" />
+        <li className="NavBar__item">
+          <NavLink to="/profile">
+            {({ isActive }) => (
+              <button
+                className={`NavBar__btn NavBar__btn--profile  ${
+                  isActive
+                    ? "NavBar__btn--profile-selected"
+                    : "NavBar__btn--profile"
+                }`}
+              ></button>
+            )}
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -19,7 +19,7 @@ async function getDishDetail(mealId) {
 }
 
 async function getDishesByCategorieService(url) {
-  console.log("Ejecutando service");
+  console.log("getDishesByCategorieService");
   try {
     const response = await fetch(url);
 
@@ -47,7 +47,7 @@ async function getDishesByCategorieService(url) {
 
         dishesList.push(dishInfo);
       }
-      console.log("Hicimos la peticion :(");
+
       return { error: false, data: dishesList };
     } else {
       return { error: true, message: "An error ocurred" };
